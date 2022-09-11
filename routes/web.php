@@ -22,8 +22,4 @@ Route::get('/',[ClienteController::class, 'index']);
 
 /*criar ciliente*/
 Route::get('/cliente/create',[ClienteController::class, 'create']);
-
-/*rota de inserção*/
-Route::get('/sobre', function () {
-    return view('cadastro');
-});
+Route::post('/cliente',[ClienteController::class, 'store']);

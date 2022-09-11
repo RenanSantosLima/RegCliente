@@ -14,8 +14,17 @@
     </head>
     <body>
 
+
+        <!-- mensagem -->
+        @if(session('msg'))
+            <p class="">{{ session('msg')}}</p>
+        @endif
+
+
         <!-- area do conteudo -->
         @yield('content')
+
+        
 
         <!-- rodape -->
         <footer>
