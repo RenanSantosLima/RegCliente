@@ -4,9 +4,9 @@
 
 @section('content')<!-- inicio do conteudo da pagina -->
 
-    <div id="event-create-container" class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3">
 
-        <h1>Editar cliente</h1>
+        <h2>Editar cliente</h2>
 
         <form action="/cliente/update/{{ $cliente->id }}" method="POST"><!-- inicio form -->
             @csrf<!-- para enviar o formulario -->

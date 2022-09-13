@@ -4,9 +4,9 @@
 
 @section('content')<!-- inicio do conteudo da pagina -->
 
-    <div id="event-create-container" class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3">
 
-        <h1>Cadastro do cliente</h1>
+        <h2>Cadastro do cliente</h2>
 
         <form action="/cliente" method="POST"><!-- inicio form -->
             @csrf<!-- para enviar o formulario -->

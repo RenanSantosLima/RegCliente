@@ -14,10 +14,15 @@
     </head>
     <body>
 
+        <nav class="navbar sticky-top bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">RegCliente</a>
+          </div>
+        </nav>
 
         <!-- mensagem -->
         @if(session('msg'))
-            <p class="">{{ session('msg')}}</p>
+            <p class="alert alert-success mensagem">{{ session('msg')}}</p>
         @endif
 
 

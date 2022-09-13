@@ -5,38 +5,41 @@
 
 @section('content')<!-- inicio do conteudo da pagina -->
 
-    <h2>Listagem clientes</h2>
+    <div class="col-md-6 offset-md-3">
+        <h2>Listagem clientes</h2>
 
-    <table class="table"><!-- inicio table -->
+        <button class="btn btn-primary margin"><a href="/cliente/create">Novo cliente</a></button>
 
-        <thead>
-            <tr>
-                <th scope="col">Cliente</th>
-                <th scope="col">Opções</th>
-            </tr>
-        </thead>
+        <table class="table"><!-- inicio table -->
 
-        <tbody>
-            @foreach($clientes as $cliente)<!-- começo do foreach -->
-
+            <thead>
                 <tr>
-                    <td>{{ $cliente->nome }}</td>
-                    <td><a href="/cliente/edit/{{ $cliente->id }}">Editar<a/>
-                        <form action="/cliente/{{ $cliente->id }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit">Excluir</button>
-                        </form>
-                    </td>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Ação</th>
                 </tr>
+            </thead>
 
-            @endforeach<!-- fim do foreach -->
-        </tbody>
+            <tbody>
+                @foreach($clientes as $cliente)<!-- começo do foreach -->
+
+                    <tr>
+                        <td>{{ $cliente->nome }}</td>
+                        <td>
+                            <button class="btn btn-info botao"><a href="/cliente/edit/{{ $cliente->id }}"><ion-icon name="create-outline"></ion-icon>Editar<a/></button>
+                            <form action="/cliente/{{ $cliente->id }}" method="POST" class="botao">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon>Excluir</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                @endforeach<!-- fim do foreach -->
+            </tbody>
 
 
-    </table><!-- fim table -->
-    
-    <button><a href="/cliente/create">Novo cliente</a></button>
-    
+        </table><!-- fim table -->
+
+    </div>
 
 @endsection<!-- fim do conteudo da pagina -->

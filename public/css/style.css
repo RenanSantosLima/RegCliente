@@ -1,17 +1,60 @@
 /*tags*/
+body {
+	font-family: Arial, Timew New Romam;
+}
+
 h2 {
-	color: blue;
+	color: green;
+	text-align: center;
+	margin: 10px 0;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+label {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+input {
+	margin-bottom: 5px;
 }
 
 
 /*Classes*/
-.msg {
-	background-color: #16A085 ;
-	color: black;
-	border: 1px solid white;
+.mensagem {
+	margin: 1px 0;
+	border: 1px solid black;
+}
+
+.botao {
+	display: inline-block;
+}
+
+.margin {
+	margin: 5px 0;
+}
+
+/*Footer*/
+footer {
 	text-align: center;
-	padding: 20px;
-	margin-bottom: 10px;
-	margin-top: 5px;
+	background-color: #353e48;
+	color: #ccc;
+	padding: 30px;
+	position: relative;
+	bottom: 0;
 	width: 100%;
+	height: 100%;
+}
+
+footer p {
+	margin-bottom: 0;
 }
