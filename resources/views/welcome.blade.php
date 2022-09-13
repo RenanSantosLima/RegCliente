@@ -21,7 +21,13 @@
 
                 <tr>
                     <td>{{ $cliente->nome }}</td>
-                    <td>Editar/Excluir</td>
+                    <td><a href="/cliente/edit/{{ $cliente->id }}">Editar<a/>
+                        <form action="/cliente/{{ $cliente->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Excluir</button>
+                        </form>
+                    </td>
                 </tr>
 
             @endforeach<!-- fim do foreach -->

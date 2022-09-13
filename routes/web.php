@@ -20,6 +20,14 @@ use App\Http\Controllers\ClienteController;
 /*pagina principal*/
 Route::get('/',[ClienteController::class, 'index']);
 
+
 /*criar ciliente*/
 Route::get('/cliente/create',[ClienteController::class, 'create']);
 Route::post('/cliente',[ClienteController::class, 'store']);
+
+/*Deletar*/
+Route::delete('/cliente/{id}', [ClienteController::class, 'destroy']);
+
+/*Edição*/
+Route::get('/cliente/edit/{id}', [ClienteController::class, 'edit']);
+Route::put('/cliente/update/{id}', [ClienteController::class, 'update']);
